@@ -20,21 +20,27 @@ public class EducationController {
 
      // Post
      @PostMapping("/education/crear")
-     public String createEducation(@RequestBody Education Education) {
-          interEducation.saveEducation(Education);
+     public String createEducation(@RequestBody Education education) {
+          interEducation.saveEducation(education);
           return "Se CREO informacion a 'education' correctamente!";
      }
 
      // Put
      @PutMapping("/education/editar/{id}")
      public Education editEducation(@PathVariable Long id,
+               @RequestParam("title") String newTitle,
+               @RequestParam("title_grade") String newTitle_grade,
+               @RequestParam("title_trayectory") String newTitle_trayectory,
                @RequestParam("description") String newDescription) {
-          Education Education = interEducation.findEducation(id);
+          Education education = interEducation.findEducation(id);
+          
+          education.setTitle(newTitle);
+          education.setTitle_grade(newTitle_grade);
+          education.setTitle_trayectory(newTitle_trayectory);
+          education.setDescription(newDescription);
 
-          Education.setDescription(newDescription);
-
-          interEducation.saveEducation(Education);
-          return Education;
+          interEducation.saveEducation(education);
+          return education;
      }
 
      // Delete

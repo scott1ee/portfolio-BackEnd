@@ -13,7 +13,7 @@ public class BannerService implements IBannerService {
 
      @Autowired
      private BannerRepository bannerRepository;
-     
+
      @Override
      public List<Banner> getAllBanners() {
           List<Banner> banners = bannerRepository.findAll();
@@ -21,19 +21,19 @@ public class BannerService implements IBannerService {
      }
 
      @Override
-     public void saveBanner(Banner banner){
+     public void saveBanner(Banner banner) {
           bannerRepository.save(banner);
      }
 
      @Override
      public Banner findBanner(Long id) {
           Banner banner = bannerRepository.findById(id).orElse(null);
-          return banner;          
+          return banner;
      }
 
      @Override
-     public void deleteBanner(Long id){
+     public void deleteBanner(Long id) {
           bannerRepository.deleteById(id);
      }
-     
+
 }

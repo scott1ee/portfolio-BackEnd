@@ -4,7 +4,7 @@ import java.util.List;
 import com.portfolioweb.portfolio.Model.Projects;
 
 public interface IProjectsService {
-     
+
      public List<Projects> getAllProjects();
 
      public void saveProjects(Projects projects);

@@ -28,12 +28,20 @@ public class BannerController {
      // Put
      @PutMapping("/banner/editar/{id}")
      public Banner editBanner(@PathVariable Long id,
+               @RequestParam("title_name") String newTitle_name,
+               @RequestParam("title_ocupation") String newTitle_ocupation,
+               @RequestParam("title_about") String newTitle_about,
                @RequestParam("description") String newDescription,
-               @RequestParam("image_url") String newImage_url) {
+               @RequestParam("image_background") String newImage_background,
+               @RequestParam("image_me") String newImage_me) {
           Banner banner = interBanner.findBanner(id);
 
+          banner.setTitle_name(newTitle_name);
+          banner.setTitle_ocupation(newTitle_ocupation);
+          banner.setTitle_about(newTitle_about);
           banner.setDescription(newDescription);
-          banner.setImageUrl(newImage_url);
+          banner.setImage_background(newImage_background);
+          banner.setImage_me(newImage_me);
 
           interBanner.saveBanner(banner);
           return banner;

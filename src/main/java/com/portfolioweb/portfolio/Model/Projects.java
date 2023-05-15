@@ -7,7 +7,8 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter
+@Setter
 @Entity
 public class Projects {
 
@@ -15,6 +16,6 @@ public class Projects {
      @GeneratedValue(strategy = GenerationType.SEQUENCE)
      private Long id;
      private String description;
-     private String imageUrl;
+     private String image_url;
 
 }

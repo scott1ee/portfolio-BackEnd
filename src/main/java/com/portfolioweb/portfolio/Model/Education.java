@@ -7,13 +7,17 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter
+@Setter
 @Entity
 public class Education {
 
      @Id
      @GeneratedValue(strategy = GenerationType.SEQUENCE)
      private Long id;
+     private String title;
+     private String title_grade;
+     private String title_trayectory;
      private String description;
 
 }

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.portfolioweb.portfolio.Model.Login;
 
 @Repository
-public interface LoginRepository extends JpaRepository<Login, Long>{
-     
+public interface LoginRepository extends JpaRepository<Login, Long> {
+
+
 }

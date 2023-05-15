@@ -4,7 +4,7 @@ import java.util.List;
 import com.portfolioweb.portfolio.Model.Education;
 
 public interface IEducationService {
-     
+
      public List<Education> getAllEducations();
 
      public void saveEducation(Education Education);

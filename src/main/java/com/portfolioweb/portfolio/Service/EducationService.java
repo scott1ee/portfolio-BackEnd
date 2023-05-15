@@ -13,7 +13,7 @@ public class EducationService implements IEducationService {
 
      @Autowired
      private EducationRepository educationRepository;
-     
+
      @Override
      public List<Education> getAllEducations() {
           List<Education> educations = educationRepository.findAll();
@@ -21,19 +21,19 @@ public class EducationService implements IEducationService {
      }
 
      @Override
-     public void saveEducation(Education education){
+     public void saveEducation(Education education) {
           educationRepository.save(education);
      }
 
      @Override
      public Education findEducation(Long id) {
           Education education = educationRepository.findById(id).orElse(null);
-          return education;          
+          return education;
      }
 
      @Override
-     public void deleteEducation(Long id){
+     public void deleteEducation(Long id) {
           educationRepository.deleteById(id);
      }
-     
+
 }

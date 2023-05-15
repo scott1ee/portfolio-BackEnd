@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.portfolioweb.portfolio.Model.Banner;
 
 @Repository
-public interface BannerRepository extends JpaRepository<Banner, Long>{
-     
+public interface BannerRepository extends JpaRepository<Banner, Long> {
+
 }

@@ -34,7 +34,7 @@ public class ProjectsController {
           Projects projects = interProjects.findProjects(id);
 
           projects.setDescription(newDescription);
-          projects.setImageUrl(newImage_url);
+          projects.setImage_url(newImage_url);
 
           interProjects.saveProjects(projects);
           return projects;
